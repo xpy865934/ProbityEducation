@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_minggui"
+        android:icon="@drawable/minggui"
+        android:title="@string/minggui"
+        />
+    <item
+        android:id="@+id/item_taolian"
+        android:icon="@drawable/taolian"
+        android:title="@string/taolian"
+        />
+    <item
+        android:id="@+id/item_lianjie"
+        android:icon="@drawable/lianjie"
+        android:title="@string/lianjie"
+        />
+    <item
+        android:id="@+id/item_zuopin"
+        android:icon="@drawable/zuopin"
+        android:title="@string/zuopin"
+        />
+</menu>

@@ -1,0 +1,11 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xpy.administrator.probityeducation.fragment.ShuFaFragment">
+
+    <GridView
+        android:id="@+id/gv_shufa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></GridView>
+</FrameLayout>

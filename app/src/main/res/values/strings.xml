@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">廉洁</string>
+
+    <string name="minggui">明规</string>
+    <string name="taolian">陶廉</string>
+    <string name="lianjie">寄廉洁</string>
+    <string name="zuopin">作品</string>
+    <string name="jianjie">个人简介</string>
+    <string name="yulu">语录</string>
+    <string name="story">小故事</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shufa">书法</string>
+    <string name="huihua">绘画</string>
+    <string name="pingbao">电脑屏保</string>
+    <string name="wangye">网页</string>
+    <string name="ppt">PPT</string>
+
+    <string-array name="arr_header_menu">
+        <item>书法</item>
+        <item>绘画</item>
+        <item>电脑屏保</item>
+        <item>网页</item>
+        <item>PPT</item>
+    </string-array>
+
+</resources>

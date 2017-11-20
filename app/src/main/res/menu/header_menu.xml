@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_shufa"
+        android:title="@string/shufa"
+        />
+    <item
+        android:id="@+id/item_huihua"
+        android:title="@string/huihua"
+        />
+    <item
+        android:id="@+id/item_pingbao"
+        android:title="@string/pingbao"
+        />
+    <item
+        android:id="@+id/item_wangye"
+        android:title="@string/wangye"
+        />
+    <item
+        android:id="@+id/item_ppt"
+        android:title="@string/ppt"
+        />
+</menu>
