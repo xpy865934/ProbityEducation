@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.xpy.administrator.probityeducation.R;
 import com.xpy.administrator.probityeducation.adapter.HeaderViewPagerAdapter;
@@ -28,6 +29,8 @@ public class ZuoPinFragment extends Fragment {
     private List<Fragment> list =null;
     @BindArray(R.array.arr_header_menu)
     String[] titles;
+    @BindView(R.id.tv_content_title)
+    TextView tvContentTitle;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,6 +53,7 @@ public class ZuoPinFragment extends Fragment {
 
 
     private void initView() {
+        tvContentTitle.setText("作品");
         setViewPager(mViewPager);
         mHeaderTabLayout.setupWithViewPager(mViewPager);
     }

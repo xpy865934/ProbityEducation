@@ -12,6 +12,7 @@ import com.xpy.administrator.probityeducation.R;
 import com.xpy.administrator.probityeducation.adapter.MyGridViewAdapter;
 import com.xpy.administrator.probityeducation.bean.ImageTitleModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -36,6 +37,7 @@ public class ShuFaFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        list = new ArrayList<>();
         MyGridViewAdapter adapter = new MyGridViewAdapter(getActivity(),list);
         gvShuFa.setAdapter(adapter);
     }

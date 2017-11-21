@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.xpy.administrator.probityeducation.R;
 import com.xpy.administrator.probityeducation.activity.ZhunZeDetailsActivity;
@@ -24,6 +25,8 @@ public class MingGuiFragment extends Fragment {
     ImageView imgMingGuiItem2;
     @BindView(R.id.img_minggui_item3)
     ImageView imgMingGuiItem3;
+    @BindView(R.id.tv_content_title)
+    TextView tvContentTitle;
 
 
     @Override
@@ -39,6 +42,7 @@ public class MingGuiFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        tvContentTitle.setText("明规");
     }
 
     public MingGuiFragment() {

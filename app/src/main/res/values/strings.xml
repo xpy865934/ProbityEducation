@@ -1,15 +1,15 @@
 <resources>
-    <string name="app_name">廉洁</string>
+    <string name="app_name">陶廉文化</string>
 
     <string name="minggui">明规</string>
-    <string name="taolian">陶廉</string>
-    <string name="lianjie">寄廉洁</string>
+    <string name="taolian">观廉</string>
+    <string name="lianjie">话廉</string>
     <string name="zuopin">作品</string>
     <string name="jianjie">个人简介</string>
     <string name="yulu">语录</string>
     <string name="story">小故事</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change tplaceholder_imagelder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="shufa">书法</string>
     <string name="huihua">绘画</string>

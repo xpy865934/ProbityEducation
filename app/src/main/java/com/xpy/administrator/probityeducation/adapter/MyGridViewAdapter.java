@@ -49,19 +49,19 @@ public class MyGridViewAdapter extends BaseAdapter {
             holder = new Holder();
             convertView = LayoutInflater.from(context).inflate(R.layout.grid_view_item, null);
             holder.imtThumbnail = (ImageView) convertView.findViewById(R.id.img_thumbnail);
-            holder.tvTitle = (TextView) convertView.findViewById(R.id.tv_title);
+            holder.tvName = (TextView) convertView.findViewById(R.id.tv_name);
             convertView.setTag(holder);
         } else {
             holder = (Holder) convertView.getTag();
         }
 
         holder.imtThumbnail.setImageBitmap(ImageUtils.getImageThumbnail(context,list.get(position).getImageId()));
-        holder.tvTitle.setText(list.get(position).getTitle() + "");
+        holder.tvName.setText(list.get(position).getTitle() + "");
         return convertView;
     }
 
     private class Holder{
         ImageView imtThumbnail;
-        TextView tvTitle;
+        TextView tvName;
     }
 }

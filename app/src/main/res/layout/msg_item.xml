@@ -1,47 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
-        <ImageView
+        <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/img_head"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/taoxingzhi" />
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            fresco:actualImageScaleType="fitXY"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tv_nickname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lines="1"
-                android:textColor="#717375"
-                android:text="想"/>
+                android:text=""
+                android:textColor="#717375" />
+
             <TextView
                 android:id="@+id/tv_comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
                 android:layout_marginTop="5dp"
-                android:text="捧着一颗心来，不带半根草去。吟唱廉洁之歌，鼓舞清风之气。犹如莲花之洁，恰似青竹之直。爱满天下之情，陶子廉洁之心。"/>
+                android:text=""
+                android:textColor="#000000" />
+
             <TextView
                 android:id="@+id/tv_time"
-                android:layout_marginTop="5dp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="5dp"
                 android:lines="1"
-                android:textColor="#A0A0A0"
-                android:text="昨天"/>
+                android:text=""
+                android:textColor="#A0A0A0" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

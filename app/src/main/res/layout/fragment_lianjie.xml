@@ -4,60 +4,79 @@
     android:layout_height="match_parent"
     tools:context="com.xpy.administrator.probityeducation.fragment.LianJieFragment">
 
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ListView
-            android:layout_above="@id/ll_shuru"
-            android:layout_width="match_parent"
-            android:id="@+id/lv_lianjie_content"
-            android:layout_height="match_parent"></ListView>
+        <include layout="@layout/fragment_title" />
 
-        <LinearLayout
-            android:id="@+id/ll_shuru"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_lianjie_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/ll_shuru"></ListView>
+
             <LinearLayout
+                android:id="@+id/ll_shuru"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageView
-                    android:id="@+id/img_choose_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/choose_image"/>
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/edi_name"
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="姓名"
-                    android:lines="1" />
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edi_name"
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:hint="姓名"
+                        android:lines="1" />
+
+                    <ImageView
+                        android:id="@+id/img_choose_image"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_toRightOf="@id/edi_name"
+                        android:src="@drawable/choose_image" />
+                </RelativeLayout>
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edi_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/img_send"
+                        android:hint="内容"
+                        android:lines="1" />
+
+                    <ImageView
+                        android:id="@+id/img_send"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/send"
+                        android:text="发送" />
+                </RelativeLayout>
             </LinearLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <EditText
-                    android:id="@+id/edi_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@id/img_send"
-                    android:lines="1"
-                    android:hint="内容"/>
-                <ImageView
-                    android:id="@+id/img_send"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/send"
-                    android:text="发送"/>
-            </RelativeLayout>
-        </LinearLayout>
-    </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
 
 </FrameLayout>
