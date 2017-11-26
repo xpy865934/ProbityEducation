@@ -6,4 +6,7 @@
     <color name="colorBlack">#000000</color>
     <color name="colorBlue">#afadc4</color>
     <color name="colorWhite">#ffffff</color>
+
+    <color name="tab_checked">#3F51B5</color>
+    <color name="tab_unchecked">#757575</color>
 </resources>
