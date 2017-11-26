@@ -17,15 +17,15 @@ import java.util.List;
  * Created by Administrator on 2017/11/3.
  */
 
-public class ImageTitleAdapter extends BaseAdapter {
+public class ZhunZeImageTitleAdapter extends BaseAdapter {
     private Context context;
     private List<ImageTitleModel> list;
 
-    public ImageTitleAdapter(Context context) {
+    public ZhunZeImageTitleAdapter(Context context) {
         this.context = context;
     }
 
-    public ImageTitleAdapter(Context context, List<ImageTitleModel> list) {
+    public ZhunZeImageTitleAdapter(Context context, List<ImageTitleModel> list) {
         this.context = context;
         this.list = list;
     }
@@ -55,15 +55,15 @@ public class ImageTitleAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageTitleAdapterItemViewHolder holder;
+        Holder holder;
         if (convertView == null) {
-            holder = new ImageTitleAdapterItemViewHolder();
-            convertView = LayoutInflater.from(context).inflate(R.layout.image_title_adapter, null);
+            holder = new Holder();
+            convertView = LayoutInflater.from(context).inflate(R.layout.zhun_ze_image_title_adapter, null);
             holder.img = (ImageView) convertView.findViewById(R.id.cita_img);
             holder.tvTitle = (TextView) convertView.findViewById(R.id.cita_tv_title);
             convertView.setTag(holder);
         } else {
-            holder = (ImageTitleAdapterItemViewHolder) convertView.getTag();
+            holder = (Holder) convertView.getTag();
         }
 
         holder.img.setImageResource(list.get(position).getImageId());
@@ -72,7 +72,7 @@ public class ImageTitleAdapter extends BaseAdapter {
         return convertView;
     }
 
-    private class ImageTitleAdapterItemViewHolder {
+    private class Holder {
         ImageView img;
         TextView tvTitle;
     }

@@ -11,7 +11,7 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.xpy.administrator.probityeducation.R;
-import com.xpy.administrator.probityeducation.bean.MsgModel;
+import com.xpy.administrator.probityeducation.model.MsgModel;
 
 import java.util.List;
 

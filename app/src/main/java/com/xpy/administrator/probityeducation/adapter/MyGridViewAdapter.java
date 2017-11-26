@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.xpy.administrator.probityeducation.R;
-import com.xpy.administrator.probityeducation.bean.ImageTitleModel;
+import com.xpy.administrator.probityeducation.model.ImageTitleModel;
 import com.xpy.administrator.probityeducation.utils.ImageUtils;
 
 import java.util.List;

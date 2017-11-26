@@ -6,8 +6,24 @@
     android:layout_height="match_parent"
     tools:context="com.xpy.administrator.probityeducation.activity.ZhunZeDetailsActivity">
 
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/fragment_title" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/left_arrows" />
+    </RelativeLayout>
+
     <ListView
         android:id="@+id/lv_zhun_ze_details"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl"></ListView>
 </RelativeLayout>

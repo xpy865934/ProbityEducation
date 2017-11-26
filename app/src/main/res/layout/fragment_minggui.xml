@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.xpy.administrator.probityeducation.fragment.MingGuiFragment">
 
     <LinearLayout
@@ -16,11 +17,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <com.jude.rollviewpager.RollPagerView
+                android:id="@+id/m_rollpager"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:rollviewpager_play_delay="3000"></com.jude.rollviewpager.RollPagerView>
+
             <ImageView
                 android:id="@+id/img_minggui_item1"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="5dp"
+                android:layout_below="@id/m_rollpager"
                 android:src="@drawable/img_minggui_item1" />
 
             <ImageView

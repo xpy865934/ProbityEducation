@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.xpy.administrator.probityeducation.R;
 import com.xpy.administrator.probityeducation.adapter.MsgAdapter;
-import com.xpy.administrator.probityeducation.bean.MsgModel;
+import com.xpy.administrator.probityeducation.model.MsgModel;
 
 import java.util.ArrayList;
 import java.util.List;

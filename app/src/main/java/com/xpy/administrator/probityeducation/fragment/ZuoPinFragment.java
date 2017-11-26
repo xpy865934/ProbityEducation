@@ -26,7 +26,7 @@ public class ZuoPinFragment extends Fragment {
     @BindView(R.id.header_tablayout)
     TabLayout mHeaderTabLayout;
 
-    private List<Fragment> list =null;
+    private List<Fragment> list = null;
     @BindArray(R.array.arr_header_menu)
     String[] titles;
     @BindView(R.id.tv_content_title)
@@ -37,7 +37,7 @@ public class ZuoPinFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_zuopin, container, false);
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         return view;
     }
 
@@ -65,7 +65,7 @@ public class ZuoPinFragment extends Fragment {
         list.add(new PingBaoFragment());
         list.add(new WangYeFragment());
         list.add(new PPTFragment());
-        HeaderViewPagerAdapter adapter = new HeaderViewPagerAdapter(getActivity().getSupportFragmentManager(),list,titles);
+        HeaderViewPagerAdapter adapter = new HeaderViewPagerAdapter(getActivity().getSupportFragmentManager(), list, titles);
         mViewPager.setAdapter(adapter);
     }
 }

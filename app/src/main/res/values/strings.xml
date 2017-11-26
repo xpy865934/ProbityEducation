@@ -25,4 +25,15 @@
         <item>PPT</item>
     </string-array>
 
+    <string-array name="arr_zhunze">
+        <item>第一条 坚持公私分明，先公后私，克己奉公</item>
+        <item>第二条 坚持崇廉拒腐，清白做人，干净做事</item>
+        <item>第三条 坚持尚俭戒奢，艰苦朴素，勤俭节约</item>
+        <item>第四条 坚持吃苦在前，享受在后，甘于奉献</item>
+        <item>第五条 廉洁从政，自觉保持人民公仆本色</item>
+        <item>第六条 廉洁用权，自觉维护人民根本利益</item>
+        <item>第七条 廉洁修身，自觉提升思想道德境界</item>
+        <item>第八条 廉洁齐家，自觉带头树立良好家风</item>
+    </string-array>
+
 </resources>

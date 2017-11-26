@@ -102,6 +102,4 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new ZuoPinFragment());
         mViewPager.setAdapter(adapter);
     }
-
-
 }

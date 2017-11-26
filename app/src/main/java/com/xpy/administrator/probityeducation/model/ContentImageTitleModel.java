@@ -1,16 +1,18 @@
-package com.xpy.administrator.probityeducation.bean;
+package com.xpy.administrator.probityeducation.model;
 
 /**
  * Created by Administrator on 2017/11/3.
  */
 
-public class ImageTitleModel {
+public class ContentImageTitleModel {
     private int imageId;
     private String title;
+    private String content;
 
-    public ImageTitleModel(int imageId, String title) {
+    public ContentImageTitleModel(int imageId, String title, String content) {
         this.imageId = imageId;
         this.title = title;
+        this.content = content;
     }
 
     public int getImageId() {
@@ -27,5 +29,13 @@ public class ImageTitleModel {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }
