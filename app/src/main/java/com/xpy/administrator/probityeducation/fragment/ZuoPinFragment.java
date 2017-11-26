@@ -65,7 +65,7 @@ public class ZuoPinFragment extends Fragment {
         list.add(new PingBaoFragment());
         list.add(new WangYeFragment());
         list.add(new PPTFragment());
-        HeaderViewPagerAdapter adapter = new HeaderViewPagerAdapter(getActivity().getSupportFragmentManager(), list, titles);
+        HeaderViewPagerAdapter adapter = new HeaderViewPagerAdapter(getChildFragmentManager(), list, titles);
         mViewPager.setAdapter(adapter);
     }
 }
