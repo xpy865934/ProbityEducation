@@ -24,7 +24,7 @@ public class HttpUtils {
     private Gson mGson;
     private RequestQueue mRequestQueue;
     private static HttpUtils mHttpUtils;
-    private String BASE_URL="http://localhost:8080";
+    private String BASE_URL="http://10.0.3.2:8080";
 
     private HttpUtils(){
         mGson = new Gson();
@@ -56,8 +56,8 @@ public class HttpUtils {
                     if(type==String.class){
                         mTHttpCallBack.onSuccess((T)jsonObject.toString());
                     }else{
-                        if(jsonObject.has("ROWS_DETAIL")){
-                            String temp = jsonObject.getString("ROWS_DETAIL");
+                        if(jsonObject.has("result")){
+                            String temp = jsonObject.getString("result");
                             T t = mGson.fromJson(temp,type);
                             mTHttpCallBack.onSuccess(t);
                         }else{

@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.xpy.administrator.probityeducation.R;
 import com.xpy.administrator.probityeducation.adapter.MsgAdapter;
 import com.xpy.administrator.probityeducation.model.MsgModel;
@@ -33,8 +32,6 @@ public class LianJieFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        Fresco.initialize(getActivity());
         View view = inflater.inflate(R.layout.fragment_lianjie, container, false);
         ButterKnife.bind(this, view);
         return view;

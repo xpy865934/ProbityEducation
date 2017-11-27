@@ -5,12 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.xpy.administrator.probityeducation.R;
-import com.xpy.administrator.probityeducation.model.ImageTitleModel;
-import com.xpy.administrator.probityeducation.utils.ImageUtils;
+import com.xpy.administrator.probityeducation.model.ProductModel;
 
 import java.util.List;
 
@@ -19,10 +18,10 @@ import java.util.List;
  */
 
 public class MyGridViewAdapter extends BaseAdapter {
-    private List<ImageTitleModel> list;
+    private List<ProductModel> list;
     private Context context;
 
-    public MyGridViewAdapter(Context context,List<ImageTitleModel> list){
+    public MyGridViewAdapter(Context context,List<ProductModel> list){
         this.context = context;
         this.list = list;
     }
@@ -48,20 +47,19 @@ public class MyGridViewAdapter extends BaseAdapter {
         if (convertView == null) {
             holder = new Holder();
             convertView = LayoutInflater.from(context).inflate(R.layout.grid_view_item, null);
-            holder.imtThumbnail = (ImageView) convertView.findViewById(R.id.img_thumbnail);
+            holder.imtThumbnail = (SimpleDraweeView) convertView.findViewById(R.id.img_thumbnail);
             holder.tvName = (TextView) convertView.findViewById(R.id.tv_name);
             convertView.setTag(holder);
         } else {
             holder = (Holder) convertView.getTag();
         }
-
-        holder.imtThumbnail.setImageBitmap(ImageUtils.getImageThumbnail(context,list.get(position).getImageId()));
-        holder.tvName.setText(list.get(position).getTitle() + "");
+        holder.imtThumbnail.setImageURI("http://10.0.3.2:8080"+list.get(position).getProduct_path());
+        holder.tvName.setText(list.get(position).getProduct_name() + "");
         return convertView;
     }
 
     private class Holder{
-        ImageView imtThumbnail;
+        SimpleDraweeView imtThumbnail;
         TextView tvName;
     }
 }
