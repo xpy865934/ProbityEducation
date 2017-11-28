@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.xpy.administrator.probityeducation.R;
 import com.xpy.administrator.probityeducation.adapter.MyGridViewAdapter;
 import com.xpy.administrator.probityeducation.model.ProductModel;

@@ -5,12 +5,12 @@
     android:orientation="vertical"
     android:layout_height="wrap_content">
 
-    <com.facebook.drawee.view.SimpleDraweeView
+    <ImageView
         android:id="@+id/img_thumbnail"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
-        fresco:actualImageScaleType="fitXY"/>
+        android:scaleType="fitXY"/>
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="match_parent"

@@ -24,7 +24,7 @@ public class HttpUtils {
     private Gson mGson;
     private RequestQueue mRequestQueue;
     private static HttpUtils mHttpUtils;
-    private String BASE_URL="http://10.0.3.2:8080";
+    private String BASE_URL="http://192.168.253.1:8080";
 
     private HttpUtils(){
         mGson = new Gson();

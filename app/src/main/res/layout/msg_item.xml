@@ -12,11 +12,11 @@
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
-        <com.facebook.drawee.view.SimpleDraweeView
+        <ImageView
             android:id="@+id/img_head"
             android:layout_width="42dp"
             android:layout_height="42dp"
-            fresco:actualImageScaleType="fitXY"/>
+            android:scaleType="fitXY"/>
 
         <LinearLayout
             android:layout_width="match_parent"
