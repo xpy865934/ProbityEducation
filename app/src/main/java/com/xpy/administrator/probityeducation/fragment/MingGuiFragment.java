@@ -8,12 +8,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jude.rollviewpager.RollPagerView;
 import com.jude.rollviewpager.hintview.ColorPointHintView;
 import com.xpy.administrator.probityeducation.R;
+import com.xpy.administrator.probityeducation.activity.YuLuActivity;
 import com.xpy.administrator.probityeducation.activity.ZhunZeDetailsActivity;
 import com.xpy.administrator.probityeducation.adapter.MyRollViewPagerAdapter;
 
@@ -27,12 +28,10 @@ import static android.graphics.Color.YELLOW;
 public class MingGuiFragment extends Fragment {
     @BindView(R.id.m_rollpager)
     RollPagerView mRollPager;
-    @BindView(R.id.img_minggui_item1)
-    ImageView imgMingGuiItem1;
-    @BindView(R.id.img_minggui_item2)
-    ImageView imgMingGuiItem2;
-    @BindView(R.id.img_minggui_item3)
-    ImageView imgMingGuiItem3;
+    @BindView(R.id.ll_zhunze)
+    LinearLayout llZhuaNe;
+    @BindView(R.id.ll_yulu)
+    LinearLayout llYuLu;
     @BindView(R.id.tv_content_title)
     TextView tvContentTitle;
 
@@ -77,9 +76,15 @@ public class MingGuiFragment extends Fragment {
         // Required empty public constructor
     }
 
-    @OnClick(R.id.img_minggui_item1)
-    public void item1Click(View view){
+    @OnClick(R.id.ll_zhunze)
+    public void zhunZeClick(View view){
         Intent intent = new Intent(getActivity(), ZhunZeDetailsActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.ll_yulu)
+    public void yuLuClick(View view){
+        Intent intent = new Intent(getActivity(), YuLuActivity.class);
         startActivity(intent);
     }
 }

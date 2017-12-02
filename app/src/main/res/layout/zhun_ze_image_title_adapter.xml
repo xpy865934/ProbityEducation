@@ -3,27 +3,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/cita_img"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/taolian" />
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/cita_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/taolian" />
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_toRightOf="@id/cita_img"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ll"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/cita_tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="标题"
+            android:layout_marginTop="5dp"
+            android:text="第一条 坚持公私分明，先公后私，克己奉公"
             android:textColor="@color/colorBlack"
-            android:textSize="24sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_zhunze_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="思想纯洁是马克思主义政党保持纯洁性的根本，道德高尚是领导干部做到清正廉洁的基础。我们强调坚持德才兼备、以德为先，..." />
     </LinearLayout>
 
 </RelativeLayout>

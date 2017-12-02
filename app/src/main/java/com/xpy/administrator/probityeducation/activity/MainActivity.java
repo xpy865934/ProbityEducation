@@ -10,9 +10,9 @@ import android.view.MenuItem;
 import com.xpy.administrator.probityeducation.BottomNavigationHelp;
 import com.xpy.administrator.probityeducation.R;
 import com.xpy.administrator.probityeducation.adapter.ViewPagerAdapter;
-import com.xpy.administrator.probityeducation.fragment.TaoLianFragment;
-import com.xpy.administrator.probityeducation.fragment.MingGuiFragment;
 import com.xpy.administrator.probityeducation.fragment.LianJieFragment;
+import com.xpy.administrator.probityeducation.fragment.MingGuiFragment;
+import com.xpy.administrator.probityeducation.fragment.TaoLianFragment;
 import com.xpy.administrator.probityeducation.fragment.ZuoPinFragment;
 
 

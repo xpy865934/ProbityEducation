@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.xpy.administrator.probityeducation.R;
@@ -14,6 +15,7 @@ import com.xpy.administrator.probityeducation.adapter.MyGridViewAdapter;
 import com.xpy.administrator.probityeducation.model.ProductModel;
 import com.xpy.administrator.probityeducation.utils.HttpCallBack;
 import com.xpy.administrator.probityeducation.utils.HttpUtils;
+import com.xpy.administrator.probityeducation.utils.MyImageDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,8 +59,13 @@ public class ShuFaFragment extends Fragment {
                 Log.i("TAG", "onFail: "+errorMsg);
             }
         });
-        
 
+        gvShuFa.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                new MyImageDialog(getContext()).show();
+            }
+        });
     }
 
     public ShuFaFragment() {

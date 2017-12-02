@@ -23,6 +23,6 @@ public class StartPageActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.gradient_in,R.anim.gradient_out);
                 StartPageActivity.this.finish();
             }
-        },2000);
+        },1000);
     }
 }

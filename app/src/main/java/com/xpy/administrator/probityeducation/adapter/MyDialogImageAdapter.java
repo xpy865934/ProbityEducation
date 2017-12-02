@@ -6,25 +6,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.xpy.administrator.probityeducation.R;
-import com.xpy.administrator.probityeducation.model.ProductModel;
 import com.xpy.administrator.probityeducation.utils.GildeUtils;
 
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/11/20.
+ * Created by Administrator on 2017/11/29.
  */
 
-public class MyGridViewAdapter extends BaseAdapter {
-    private List<ProductModel> list;
+public class MyDialogImageAdapter extends BaseAdapter{
     private Context context;
+    private List<String> list;
 
-    public MyGridViewAdapter(Context context,List<ProductModel> list){
+    public MyDialogImageAdapter(Context context,List<String> list){
         this.context = context;
-        this.list = list;
+        this.list=list;
     }
 
     @Override
@@ -34,7 +32,7 @@ public class MyGridViewAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-       return list.get(position);
+        return list.get(position);
     }
 
     @Override
@@ -45,24 +43,21 @@ public class MyGridViewAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Holder holder;
-        if (convertView == null) {
+        if(convertView==null){
             holder = new Holder();
-            convertView = LayoutInflater.from(context).inflate(R.layout.grid_view_item, null);
-            holder.imtThumbnail = (ImageView) convertView.findViewById(R.id.img_thumbnail);
-            holder.tvName = (TextView) convertView.findViewById(R.id.tv_name);
+            convertView = LayoutInflater.from(context).inflate(R.layout.image_dialog_list_item_layout,null);
+            holder.imgBig = (ImageView) convertView.findViewById(R.id.img_big);
             convertView.setTag(holder);
-        } else {
+        }else{
             holder = (Holder) convertView.getTag();
         }
 
-        GildeUtils.loadImage("http://10.0.3.2:8080"+list.get(position).getProduct_path(),context,holder.imtThumbnail);
+        GildeUtils.loadImage("http://10.0.3.2:8080/ProbityEducationServer/products_image/1.jpg",context,holder.imgBig);
 
-        holder.tvName.setText(list.get(position).getProduct_name() + "");
         return convertView;
     }
 
     private class Holder{
-        ImageView imtThumbnail;
-        TextView tvName;
+        ImageView imgBig;
     }
 }

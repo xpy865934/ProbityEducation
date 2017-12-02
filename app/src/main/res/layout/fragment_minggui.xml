@@ -1,8 +1,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.xpy.administrator.probityeducation.fragment.MingGuiFragment">
 
     <LinearLayout
@@ -23,29 +23,66 @@
                 android:layout_height="180dp"
                 app:rollviewpager_play_delay="3000"></com.jude.rollviewpager.RollPagerView>
 
-            <ImageView
-                android:id="@+id/img_minggui_item1"
+            <LinearLayout
+                android:id="@+id/ll_zhunze"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/m_rollpager"
-                android:src="@drawable/img_minggui_item1" />
+                android:layout_marginTop="15dp"
+                android:background="@color/colorGray2"
+                android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/img_minggui_item2"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_below="@id/img_minggui_item1"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/img_minggui_item2" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/img_minggui_item3"
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:src="@drawable/zhunze" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:text="中国共产党\n廉洁自律准则"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_yulu"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_below="@id/img_minggui_item2"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGray2"
+                android:layout_below="@id/ll_zhunze"
                 android:layout_marginTop="5dp"
-                android:src="@drawable/img_minggui_item3" />
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="145dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/yulu" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp"
+                        android:gravity="center"
+                        android:text="习大大廉洁语录"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
 </FrameLayout>

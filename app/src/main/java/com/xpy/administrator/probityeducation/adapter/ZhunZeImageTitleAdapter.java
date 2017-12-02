@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.xpy.administrator.probityeducation.R;
-import com.xpy.administrator.probityeducation.model.ImageTitleModel;
+import com.xpy.administrator.probityeducation.model.ContentImageTitleModel;
 
 import java.util.List;
 
@@ -19,22 +19,22 @@ import java.util.List;
 
 public class ZhunZeImageTitleAdapter extends BaseAdapter {
     private Context context;
-    private List<ImageTitleModel> list;
+    private List<ContentImageTitleModel> list;
 
     public ZhunZeImageTitleAdapter(Context context) {
         this.context = context;
     }
 
-    public ZhunZeImageTitleAdapter(Context context, List<ImageTitleModel> list) {
+    public ZhunZeImageTitleAdapter(Context context, List<ContentImageTitleModel> list) {
         this.context = context;
         this.list = list;
     }
 
-    public List<ImageTitleModel> getList() {
+    public List<ContentImageTitleModel> getList() {
         return list;
     }
 
-    public void setList(List<ImageTitleModel> list) {
+    public void setList(List<ContentImageTitleModel> list) {
         this.list = list;
     }
 
@@ -44,7 +44,7 @@ public class ZhunZeImageTitleAdapter extends BaseAdapter {
     }
 
     @Override
-    public ImageTitleModel getItem(int position) {
+    public ContentImageTitleModel getItem(int position) {
         return list.get(position);
     }
 
@@ -61,6 +61,7 @@ public class ZhunZeImageTitleAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(context).inflate(R.layout.zhun_ze_image_title_adapter, null);
             holder.img = (ImageView) convertView.findViewById(R.id.cita_img);
             holder.tvTitle = (TextView) convertView.findViewById(R.id.cita_tv_title);
+            holder.tvZhunZeDetail = (TextView) convertView.findViewById(R.id.tv_zhunze_detail);
             convertView.setTag(holder);
         } else {
             holder = (Holder) convertView.getTag();
@@ -68,6 +69,7 @@ public class ZhunZeImageTitleAdapter extends BaseAdapter {
 
         holder.img.setImageResource(list.get(position).getImageId());
         holder.tvTitle.setText(list.get(position).getTitle() + "");
+        holder.tvZhunZeDetail.setText(list.get(position).getContent() + "");
 
         return convertView;
     }
@@ -75,5 +77,6 @@ public class ZhunZeImageTitleAdapter extends BaseAdapter {
     private class Holder {
         ImageView img;
         TextView tvTitle;
+        TextView tvZhunZeDetail;
     }
 }

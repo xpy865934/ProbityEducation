@@ -62,6 +62,7 @@ public class ZuoPinFragment extends Fragment {
         list = new ArrayList<>();
         list.add(new ShuFaFragment());
         list.add(new HuiHuaFragment());
+        list.add(new SheYingFragment());
         list.add(new PingBaoFragment());
         list.add(new WangYeFragment());
         list.add(new PPTFragment());
