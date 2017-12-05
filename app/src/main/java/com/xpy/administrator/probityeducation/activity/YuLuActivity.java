@@ -8,7 +8,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.xpy.administrator.probityeducation.R;
+import com.xpy.administrator.probityeducation.adapter.YuLuTitleContentAdapter;
+import com.xpy.administrator.probityeducation.model.TitleContentModel;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindArray;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -19,6 +25,15 @@ public class YuLuActivity extends AppCompatActivity {
     ImageView ivBack;
     @BindView(R.id.lv_yulu)
     ListView lvYuLu;
+
+    YuLuTitleContentAdapter adapter;
+    List<TitleContentModel> list;
+
+    @BindArray(R.array.arr_zhunze_details)
+    String zhunzeDetails[];
+
+    @BindArray(R.array.arr_zhunze_time)
+    String zhunzeTime[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,5 +49,14 @@ public class YuLuActivity extends AppCompatActivity {
                 YuLuActivity.this.finish();
             }
         });
+
+        list = new ArrayList<>();
+        for (int i = 0; i < zhunzeTime.length; i++) {
+            TitleContentModel titleContentModel = new TitleContentModel(zhunzeTime[i],zhunzeDetails[i]);
+            list.add(titleContentModel);
+        }
+
+        adapter = new YuLuTitleContentAdapter(YuLuActivity.this,list);
+        lvYuLu.setAdapter(adapter);
     }
 }

@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.xpy.administrator.probityeducation.R;
-import com.xpy.administrator.probityeducation.model.ImageTitleModel;
+import com.xpy.administrator.probityeducation.model.ContentImageTitleModel;
 
 import java.util.List;
 
@@ -17,24 +17,24 @@ import java.util.List;
  * Created by Administrator on 2017/11/3.
  */
 
-public class ImageTitleAdapter extends BaseAdapter {
+public class YuLuAndStoryContentImageTitleAdapter extends BaseAdapter {
     private Context context;
-    private List<ImageTitleModel> list;
+    private List<ContentImageTitleModel> list;
 
-    public ImageTitleAdapter(Context context) {
+    public YuLuAndStoryContentImageTitleAdapter(Context context) {
         this.context = context;
     }
 
-    public ImageTitleAdapter(Context context, List<ImageTitleModel> list) {
+    public YuLuAndStoryContentImageTitleAdapter(Context context, List<ContentImageTitleModel> list) {
         this.context = context;
         this.list = list;
     }
 
-    public List<ImageTitleModel> getList() {
+    public List<ContentImageTitleModel> getList() {
         return list;
     }
 
-    public void setList(List<ImageTitleModel> list) {
+    public void setList(List<ContentImageTitleModel> list) {
         this.list = list;
     }
 
@@ -44,7 +44,7 @@ public class ImageTitleAdapter extends BaseAdapter {
     }
 
     @Override
-    public ImageTitleModel getItem(int position) {
+    public ContentImageTitleModel getItem(int position) {
         return list.get(position);
     }
 
@@ -55,25 +55,28 @@ public class ImageTitleAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageTitleAdapterItemViewHolder holder;
+        ContentImageTitleAdapterItemViewHolder holder;
         if (convertView == null) {
-            holder = new ImageTitleAdapterItemViewHolder();
-            convertView = LayoutInflater.from(context).inflate(R.layout.image_title_adapter, null);
+            holder = new ContentImageTitleAdapterItemViewHolder();
+            convertView = LayoutInflater.from(context).inflate(R.layout.yulu_content_image_title_item_layout, null);
             holder.img = (ImageView) convertView.findViewById(R.id.cita_img);
             holder.tvTitle = (TextView) convertView.findViewById(R.id.cita_tv_title);
+            holder.tvContent = (TextView) convertView.findViewById(R.id.cita_tv_content);
             convertView.setTag(holder);
         } else {
-            holder = (ImageTitleAdapterItemViewHolder) convertView.getTag();
+            holder = (ContentImageTitleAdapterItemViewHolder) convertView.getTag();
         }
 
         holder.img.setImageResource(list.get(position).getImageId());
         holder.tvTitle.setText(list.get(position).getTitle() + "");
+        holder.tvContent.setText(list.get(position).getContent() + "");
 
         return convertView;
     }
 
-    private class ImageTitleAdapterItemViewHolder {
+    private class ContentImageTitleAdapterItemViewHolder {
         ImageView img;
         TextView tvTitle;
+        TextView tvContent;
     }
 }

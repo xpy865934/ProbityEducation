@@ -7,6 +7,9 @@
     <color name="colorGray1">#afadc4</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorGray2">#F0F0F0</color>
+    <color name="colorRed">#CC6667</color>
+    <color name="colorBlue">#00629A</color>
+    <color name="colorGreen">#67999A</color>
 
     <color name="tab_checked">#3F51B5</color>
     <color name="tab_unchecked">#757575</color>

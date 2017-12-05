@@ -56,6 +56,7 @@
                 android:orientation="horizontal">
 
                 <ListView
+                    android:id="@+id/lv_t_yulu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"></ListView>
             </LinearLayout>
@@ -78,6 +79,7 @@
                 android:orientation="horizontal">
 
                 <ListView
+                    android:id="@+id/lv_t_stories"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"></ListView>
             </LinearLayout>
