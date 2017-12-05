@@ -9,6 +9,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
+import com.xpy.administrator.probityeducation.Config;
 import com.xpy.administrator.probityeducation.MyApplication;
 
 import org.json.JSONObject;
@@ -24,7 +25,7 @@ public class HttpUtils {
     private Gson mGson;
     private RequestQueue mRequestQueue;
     private static HttpUtils mHttpUtils;
-    private String BASE_URL="http://10.0.3.2:8080";
+    private String BASE_URL= Config.ADDRESS;
 
     private HttpUtils(){
         mGson = new Gson();

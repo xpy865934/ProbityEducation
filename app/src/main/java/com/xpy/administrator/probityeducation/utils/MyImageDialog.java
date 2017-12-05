@@ -5,7 +5,11 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.view.Display;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ListView;
 
 import com.xpy.administrator.probityeducation.R;
@@ -48,8 +52,17 @@ public class MyImageDialog extends Dialog implements View.OnClickListener{
         list.add("1");
         adapter = new MyDialogImageAdapter(context,list);
         lvImage.setAdapter(adapter);
-    }
 
+        //设置弹出框宽高
+        Window dialogWindow = this.getWindow();
+        WindowManager.LayoutParams params = dialogWindow.getAttributes();
+        dialogWindow.setGravity(Gravity.CENTER);
+        WindowManager m = dialogWindow.getWindowManager();
+        Display d = m.getDefaultDisplay();
+        params.width = 316;
+        //params.height = d.getHeight() - 300;
+        dialogWindow.setAttributes(params);
+    }
 
     @Override
     public void onClick(View v) {

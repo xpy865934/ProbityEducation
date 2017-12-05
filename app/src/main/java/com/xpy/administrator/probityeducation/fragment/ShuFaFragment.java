@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
@@ -47,7 +49,7 @@ public class ShuFaFragment extends Fragment {
         adapter = new MyGridViewAdapter(getActivity(), list);
         gvShuFa.setAdapter(adapter);
 
-        HttpUtils.getInstances().httpJsonObjectRequest("/ProbityEducationServer/products", "", new HttpCallBack<List<ProductModel>>() {
+        HttpUtils.getInstances().httpJsonObjectRequest("/ProbityEducationServer/products", "{'type':'书法'}", new HttpCallBack<List<ProductModel>>() {
             @Override
             public void onSuccess(List<ProductModel> data) {
                 list.addAll(data);
@@ -63,7 +65,7 @@ public class ShuFaFragment extends Fragment {
         gvShuFa.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                new MyImageDialog(getContext()).show();
+                new MyImageDialog(getContext(),R.style.testDialog).show();
             }
         });
     }

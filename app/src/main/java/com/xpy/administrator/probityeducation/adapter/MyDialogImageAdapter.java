@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+import com.xpy.administrator.probityeducation.Config;
 import com.xpy.administrator.probityeducation.R;
 import com.xpy.administrator.probityeducation.utils.GildeUtils;
 
@@ -52,7 +53,7 @@ public class MyDialogImageAdapter extends BaseAdapter{
             holder = (Holder) convertView.getTag();
         }
 
-        GildeUtils.loadImage("http://10.0.3.2:8080/ProbityEducationServer/products_image/1.jpg",context,holder.imgBig);
+        GildeUtils.loadImage(Config.ADDRESS+"/ProbityEducationServer/products_image/1.jpg",context,holder.imgBig);
 
         return convertView;
     }

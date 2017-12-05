@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.xpy.administrator.probityeducation.Config;
 import com.xpy.administrator.probityeducation.R;
 import com.xpy.administrator.probityeducation.model.ProductModel;
 import com.xpy.administrator.probityeducation.utils.GildeUtils;
@@ -55,7 +56,7 @@ public class MyGridViewAdapter extends BaseAdapter {
             holder = (Holder) convertView.getTag();
         }
 
-        GildeUtils.loadImage("http://10.0.3.2:8080"+list.get(position).getProduct_path(),context,holder.imtThumbnail);
+        GildeUtils.loadImage(Config.ADDRESS+list.get(position).getProduct_path(),context,holder.imtThumbnail);
 
         holder.tvName.setText(list.get(position).getProduct_name() + "");
         return convertView;
