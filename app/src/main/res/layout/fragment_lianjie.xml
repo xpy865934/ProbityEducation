@@ -19,7 +19,7 @@
                 android:id="@+id/lv_lianjie_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_above="@id/ll_shuru"></ListView>
+                android:layout_above="@+id/ll_shuru"></ListView>
 
             <LinearLayout
                 android:id="@+id/ll_shuru"
@@ -62,7 +62,7 @@
                         android:id="@+id/edi_content"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_toLeftOf="@id/img_send"
+                        android:layout_toLeftOf="@+id/img_send"
                         android:hint="内容"
                         android:lines="1" />
 
