@@ -29,11 +29,11 @@ public class YuLuActivity extends AppCompatActivity {
     YuLuTitleContentAdapter adapter;
     List<TitleContentModel> list;
 
-    @BindArray(R.array.arr_zhunze_details)
-    String zhunzeDetails[];
+    @BindArray(R.array.arr_lianjie_yulu)
+    String yuluDetails[];
 
-    @BindArray(R.array.arr_zhunze_time)
-    String zhunzeTime[];
+    @BindArray(R.array.arr_lianjie_yulu_time)
+    String yuluTime[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +51,8 @@ public class YuLuActivity extends AppCompatActivity {
         });
 
         list = new ArrayList<>();
-        for (int i = 0; i < zhunzeTime.length; i++) {
-            TitleContentModel titleContentModel = new TitleContentModel(zhunzeTime[i],zhunzeDetails[i]);
+        for (int i = 0; i < yuluTime.length; i++) {
+            TitleContentModel titleContentModel = new TitleContentModel(yuluTime[i],yuluDetails[i]);
             list.add(titleContentModel);
         }
 

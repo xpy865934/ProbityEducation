@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:gravity="right"
+            android:gravity="left"
             android:text="反对腐败、建设廉洁政治，保持党的肌体健康，始终是我们党一贯坚持的鲜明政治立场。党风廉政建设，是广大干部群众始终关注的重大政治问题。“物必先腐，而后虫生。”近年来，一些国家因长期积累的矛盾导致民怨载道、社会动荡、政权垮台，其中贪污腐败就是一个重要的原因。大量事实告诉我们，腐败问题越演越烈，最终必然会亡党亡国！" />
     </LinearLayout>
 </RelativeLayout>

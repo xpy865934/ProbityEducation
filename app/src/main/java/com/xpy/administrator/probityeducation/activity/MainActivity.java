@@ -5,7 +5,9 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.xpy.administrator.probityeducation.BottomNavigationHelp;
 import com.xpy.administrator.probityeducation.R;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager mViewPager=null;
     private BottomNavigationView mBottomNavigationView=null;
     private MenuItem menuItem=null;
+    private long clickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,4 +105,25 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new ZuoPinFragment());
         mViewPager.setAdapter(adapter);
     }
+
+
+    //点击两次退出
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            exit();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    private void exit() {
+        if ((System.currentTimeMillis() - clickTime) > 2000) {
+            Toast.makeText(MainActivity.this, "再按一次返回键退出！", 0).show();
+            clickTime = System.currentTimeMillis();
+        } else {
+            this.finish();
+        }
+    }
+
 }

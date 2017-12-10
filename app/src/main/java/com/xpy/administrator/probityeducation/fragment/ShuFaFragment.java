@@ -4,11 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
@@ -32,6 +30,7 @@ public class ShuFaFragment extends Fragment {
 
     private List<ProductModel> list;
     private MyGridViewAdapter adapter = null;
+    private MyImageDialog myImageDialog;
 
 
     @Override
@@ -45,6 +44,7 @@ public class ShuFaFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        myImageDialog = new MyImageDialog(getContext(),R.style.MyImageDialog);
         list = new ArrayList<>();
         adapter = new MyGridViewAdapter(getActivity(), list);
         gvShuFa.setAdapter(adapter);
@@ -65,7 +65,9 @@ public class ShuFaFragment extends Fragment {
         gvShuFa.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                new MyImageDialog(getContext(),R.style.testDialog).show();
+
+
+                myImageDialog.show();
             }
         });
     }

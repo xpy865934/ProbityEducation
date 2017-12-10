@@ -15,7 +15,7 @@ import com.jude.rollviewpager.RollPagerView;
 import com.jude.rollviewpager.hintview.ColorPointHintView;
 import com.xpy.administrator.probityeducation.R;
 import com.xpy.administrator.probityeducation.activity.YuLuActivity;
-import com.xpy.administrator.probityeducation.activity.ZhunZeDetailsActivity;
+import com.xpy.administrator.probityeducation.activity.ZhunZeListActivity;
 import com.xpy.administrator.probityeducation.adapter.MyRollViewPagerAdapter;
 
 import butterknife.BindView;
@@ -78,7 +78,7 @@ public class MingGuiFragment extends Fragment {
 
     @OnClick(R.id.ll_zhunze)
     public void zhunZeClick(View view){
-        Intent intent = new Intent(getActivity(), ZhunZeDetailsActivity.class);
+        Intent intent = new Intent(getActivity(), ZhunZeListActivity.class);
         startActivity(intent);
     }
 

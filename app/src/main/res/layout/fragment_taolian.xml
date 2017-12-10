@@ -38,17 +38,29 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@drawable/jianjie_bg_shadow"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/yulu"
+                    android:layout_marginLeft="10dp"
                     android:textStyle="bold" />
-            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_yulu_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/more"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@drawable/more"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="bold" />
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -61,17 +73,29 @@
                     android:layout_height="wrap_content"></ListView>
             </LinearLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@drawable/jianjie_bg_shadow"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:text="@string/story"
                     android:textStyle="bold" />
-            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_story_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/more"
+                    android:drawableRight="@drawable/more"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="bold" />
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

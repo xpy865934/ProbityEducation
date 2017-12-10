@@ -17,15 +17,15 @@ import java.util.List;
  * Created by Administrator on 2017/11/3.
  */
 
-public class YuLuAndStoryContentImageTitleAdapter extends BaseAdapter {
+public class StoryContentImageTitleAdapter extends BaseAdapter {
     private Context context;
     private List<ContentImageTitleModel> list;
 
-    public YuLuAndStoryContentImageTitleAdapter(Context context) {
+    public StoryContentImageTitleAdapter(Context context) {
         this.context = context;
     }
 
-    public YuLuAndStoryContentImageTitleAdapter(Context context, List<ContentImageTitleModel> list) {
+    public StoryContentImageTitleAdapter(Context context, List<ContentImageTitleModel> list) {
         this.context = context;
         this.list = list;
     }
@@ -58,7 +58,7 @@ public class YuLuAndStoryContentImageTitleAdapter extends BaseAdapter {
         ContentImageTitleAdapterItemViewHolder holder;
         if (convertView == null) {
             holder = new ContentImageTitleAdapterItemViewHolder();
-            convertView = LayoutInflater.from(context).inflate(R.layout.yulu_content_image_title_item_layout, null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.story_content_image_title_item_layout, null);
             holder.img = (ImageView) convertView.findViewById(R.id.cita_img);
             holder.tvTitle = (TextView) convertView.findViewById(R.id.cita_tv_title);
             holder.tvContent = (TextView) convertView.findViewById(R.id.cita_tv_content);
@@ -67,9 +67,15 @@ public class YuLuAndStoryContentImageTitleAdapter extends BaseAdapter {
             holder = (ContentImageTitleAdapterItemViewHolder) convertView.getTag();
         }
 
+        String title = list.get(position).getTitle();
+        String content = list.get(position).getContent();
+        if(content.length()>35){
+            content = content.substring(0,35)+"...";
+        }
+
         holder.img.setImageResource(list.get(position).getImageId());
-        holder.tvTitle.setText(list.get(position).getTitle() + "");
-        holder.tvContent.setText(list.get(position).getContent() + "");
+        holder.tvTitle.setText(title + "");
+        holder.tvContent.setText(content + "");
 
         return convertView;
     }

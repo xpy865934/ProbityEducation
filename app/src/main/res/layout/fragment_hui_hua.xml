@@ -4,10 +4,12 @@
     android:layout_height="match_parent"
     tools:context="com.xpy.administrator.probityeducation.fragment.HuiHuaFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <GridView
+        android:id="@+id/gv_huihua"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="5dp"
+        android:verticalSpacing="20dp"
+        android:numColumns="4"
+        android:layout_height="match_parent"></GridView>
 
 </FrameLayout>

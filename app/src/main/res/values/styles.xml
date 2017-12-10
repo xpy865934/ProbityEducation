@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="testDialog" parent="@android:style/Theme.Dialog">
+    <style name="MyImageDialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowNoTitle">true</item>//无标题
         <item name="android:windowBackground">@null</item>//背景

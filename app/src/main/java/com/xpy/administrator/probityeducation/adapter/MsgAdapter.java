@@ -55,6 +55,8 @@ public class MsgAdapter extends BaseAdapter {
         } else {
             holder = (Holder) convertView.getTag();
         }
+
+        holder.imgHead.setImageResource(list.get(position).getImageId());
         holder.tvNickName.setText(list.get(position).getNickName() + "");
         holder.tvComment.setText(list.get(position).getComment() + "");
         holder.tvTime.setText(list.get(position).getTime() + "");

@@ -26,6 +26,12 @@ public class MyDialogImageAdapter extends BaseAdapter{
         this.list=list;
     }
 
+    //设置item不能点击
+    @Override
+    public boolean isEnabled(int position) {
+        return false;
+    }
+
     @Override
     public int getCount() {
         return list.size();

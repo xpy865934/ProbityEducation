@@ -59,8 +59,8 @@ public class MyImageDialog extends Dialog implements View.OnClickListener{
         dialogWindow.setGravity(Gravity.CENTER);
         WindowManager m = dialogWindow.getWindowManager();
         Display d = m.getDefaultDisplay();
-        params.width = 316;
-        //params.height = d.getHeight() - 300;
+        params.width = 435;
+        params.height = 630;
         dialogWindow.setAttributes(params);
     }
 

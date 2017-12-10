@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.ZhunZeDetailsActivity" />
+        <activity android:name=".activity.ZhunZeListActivity" />
         <activity android:name=".activity.StartPageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.YuLuActivity" />
-        <activity android:name=".activity.ZhunZeContentActivity"></activity>
+        <activity android:name=".activity.ZhunZeContentActivity" />
+        <activity android:name=".activity.YuLuListActivity" />
+        <activity android:name=".activity.StoryListActivity" />
+        <activity android:name=".activity.YuLuDetailsActivity" />
+        <activity android:name=".activity.StoryDetailsActivity"></activity>
     </application>
 
 </manifest>

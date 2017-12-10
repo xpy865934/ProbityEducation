@@ -20,7 +20,7 @@ import butterknife.BindArray;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ZhunZeDetailsActivity extends AppCompatActivity {
+public class ZhunZeListActivity extends AppCompatActivity {
 
     @BindView(R.id.lv_zhun_ze_details)
     ListView lvZhunZeDetails;
@@ -57,20 +57,20 @@ public class ZhunZeDetailsActivity extends AppCompatActivity {
             list.add(contentImageTitleModel);
         }
 
-        adapter = new ZhunZeImageTitleAdapter(ZhunZeDetailsActivity.this,list);
+        adapter = new ZhunZeImageTitleAdapter(ZhunZeListActivity.this,list);
         lvZhunZeDetails.setAdapter(adapter);
 
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZhunZeDetailsActivity.this.finish();
+                ZhunZeListActivity.this.finish();
             }
         });
 
         lvZhunZeDetails.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(ZhunZeDetailsActivity.this,ZhunZeContentActivity.class);
+                Intent intent = new Intent(ZhunZeListActivity.this,ZhunZeContentActivity.class);
                 Bundle b = new Bundle();
                 b.putInt("id",position);
                 intent.putExtras(b);
