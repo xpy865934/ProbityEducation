@@ -24,8 +24,7 @@ public class YuLuListActivity extends AppCompatActivity {
     TextView tvContentTitle;
     @BindView(R.id.iv_back)
     ImageView ivBack;
-
-
+    private int [] yuLuImgs=null;
     private String[] yuLuContent=null;
 
     private TaoLianYuLuContentImageAdapter adapter;
@@ -41,10 +40,11 @@ public class YuLuListActivity extends AppCompatActivity {
 
         Bundle b =getIntent().getExtras();
         yuLuContent = b.getStringArray("yulu");
+        yuLuImgs = b.getIntArray("images");
 
         listYuLu = new ArrayList<>();
         for (int i = 0; i < yuLuContent.length; i++) {
-            listYuLu.add(new ContentImageTitleModel(R.drawable.taolian,"",yuLuContent[i]));
+            listYuLu.add(new ContentImageTitleModel(yuLuImgs[i],"",yuLuContent[i]));
         }
         adapter = new TaoLianYuLuContentImageAdapter(this,listYuLu);
         lvYuLuList.setAdapter(adapter);

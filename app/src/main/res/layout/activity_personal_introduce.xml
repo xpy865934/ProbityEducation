@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_personal_introduce"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xpy.administrator.probityeducation.activity.PersonalIntroduceActivity">
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/fragment_title" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/left_arrows" />
+    </RelativeLayout>
+
+    <com.jude.rollviewpager.RollPagerView
+        android:id="@+id/t_rollpager"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/rl"
+        app:rollviewpager_play_delay="3000"></com.jude.rollviewpager.RollPagerView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.5"
+        android:layout_below="@id/t_rollpager"
+        android:text="@string/t_introduce"/>
+</RelativeLayout>

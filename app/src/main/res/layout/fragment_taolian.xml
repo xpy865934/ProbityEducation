@@ -30,6 +30,7 @@
                     android:src="@drawable/circle_image" />
 
                 <TextView
+                    android:id="@+id/tv_tao_introduce"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"

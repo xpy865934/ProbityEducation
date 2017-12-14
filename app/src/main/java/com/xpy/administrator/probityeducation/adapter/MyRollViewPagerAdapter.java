@@ -5,14 +5,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.jude.rollviewpager.adapter.StaticPagerAdapter;
-import com.xpy.administrator.probityeducation.R;
 
 /**
  * Created by Administrator on 2017/11/23.
  */
 
 public class MyRollViewPagerAdapter extends StaticPagerAdapter {
-    private int[] imgs ={R.drawable.roll_image1,R.drawable.roll_image2,R.drawable.roll_image3,R.drawable.roll_image4};
+    private int[] imgs = null;
+
+    public void setImgs(int[] imgs) {
+        this.imgs = imgs;
+    }
 
     @Override
     public View getView(ViewGroup container, int position) {
@@ -25,6 +28,9 @@ public class MyRollViewPagerAdapter extends StaticPagerAdapter {
 
     @Override
     public int getCount() {
+        if(imgs==null){
+            return 0;
+        }
         return imgs.length;
     }
 }

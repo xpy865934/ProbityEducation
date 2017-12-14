@@ -35,6 +35,8 @@ public class MingGuiFragment extends Fragment {
     @BindView(R.id.tv_content_title)
     TextView tvContentTitle;
 
+    private  int[] imgs ={R.drawable.roll_image1,R.drawable.roll_image2,R.drawable.roll_image3,R.drawable.roll_image4};
+    private MyRollViewPagerAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -57,7 +59,9 @@ public class MingGuiFragment extends Fragment {
         //设置透明度
         mRollPager.setAnimationDurtion(500);
         //设置适配器
-        mRollPager.setAdapter(new MyRollViewPagerAdapter());
+        adapter = new MyRollViewPagerAdapter();
+        adapter.setImgs(imgs);
+        mRollPager.setAdapter(adapter);
 
         //设置指示器（顺序依次）
         //自定义指示器图片

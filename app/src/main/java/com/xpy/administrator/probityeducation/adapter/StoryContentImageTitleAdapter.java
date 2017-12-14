@@ -5,11 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.xpy.administrator.probityeducation.R;
-import com.xpy.administrator.probityeducation.model.ContentImageTitleModel;
+import com.xpy.administrator.probityeducation.model.TitleContentModel;
 
 import java.util.List;
 
@@ -19,22 +18,22 @@ import java.util.List;
 
 public class StoryContentImageTitleAdapter extends BaseAdapter {
     private Context context;
-    private List<ContentImageTitleModel> list;
+    private List<TitleContentModel> list;
 
     public StoryContentImageTitleAdapter(Context context) {
         this.context = context;
     }
 
-    public StoryContentImageTitleAdapter(Context context, List<ContentImageTitleModel> list) {
+    public StoryContentImageTitleAdapter(Context context, List<TitleContentModel> list) {
         this.context = context;
         this.list = list;
     }
 
-    public List<ContentImageTitleModel> getList() {
+    public List<TitleContentModel> getList() {
         return list;
     }
 
-    public void setList(List<ContentImageTitleModel> list) {
+    public void setList(List<TitleContentModel> list) {
         this.list = list;
     }
 
@@ -44,7 +43,7 @@ public class StoryContentImageTitleAdapter extends BaseAdapter {
     }
 
     @Override
-    public ContentImageTitleModel getItem(int position) {
+    public TitleContentModel getItem(int position) {
         return list.get(position);
     }
 
@@ -59,7 +58,6 @@ public class StoryContentImageTitleAdapter extends BaseAdapter {
         if (convertView == null) {
             holder = new ContentImageTitleAdapterItemViewHolder();
             convertView = LayoutInflater.from(context).inflate(R.layout.story_content_image_title_item_layout, null);
-            holder.img = (ImageView) convertView.findViewById(R.id.cita_img);
             holder.tvTitle = (TextView) convertView.findViewById(R.id.cita_tv_title);
             holder.tvContent = (TextView) convertView.findViewById(R.id.cita_tv_content);
             convertView.setTag(holder);
@@ -69,11 +67,10 @@ public class StoryContentImageTitleAdapter extends BaseAdapter {
 
         String title = list.get(position).getTitle();
         String content = list.get(position).getContent();
-        if(content.length()>35){
-            content = content.substring(0,35)+"...";
+        if(content.length()>66){
+//            content = content.substring(0,66)+"...";
         }
 
-        holder.img.setImageResource(list.get(position).getImageId());
         holder.tvTitle.setText(title + "");
         holder.tvContent.setText(content + "");
 
@@ -81,7 +78,6 @@ public class StoryContentImageTitleAdapter extends BaseAdapter {
     }
 
     private class ContentImageTitleAdapterItemViewHolder {
-        ImageView img;
         TextView tvTitle;
         TextView tvContent;
     }

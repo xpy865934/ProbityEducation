@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.xpy.administrator.probityeducation.R;
 import com.xpy.administrator.probityeducation.adapter.StoryContentImageTitleAdapter;
-import com.xpy.administrator.probityeducation.model.ContentImageTitleModel;
+import com.xpy.administrator.probityeducation.model.TitleContentModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class StoryListActivity extends AppCompatActivity {
     private String[] storyContent=null;
 
     private StoryContentImageTitleAdapter adapter;
-    private List<ContentImageTitleModel> listStories;
+    private List<TitleContentModel> listStories;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +56,7 @@ public class StoryListActivity extends AppCompatActivity {
             storyContent = b.getStringArray("content");
             if(storyContent!=null&&storyTitle!=null){
                 for (int i = 0; i <storyTitle.length ; i++) {
-                    listStories.add(new ContentImageTitleModel(R.drawable.zhunze1,storyTitle[i],storyContent[i]));
+                    listStories.add(new TitleContentModel(storyTitle[i],storyContent[i]));
                 }
             }
         }

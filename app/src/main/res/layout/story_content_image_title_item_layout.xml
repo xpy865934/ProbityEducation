@@ -4,22 +4,8 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/ll"
-        android:layout_width="wrap_content"
-        android:layout_height="85dp"
-        android:gravity="center">
-
-        <ImageView
-            android:id="@+id/cita_img"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/taolian" />
-    </LinearLayout>
-
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/ll"
         android:orientation="vertical">
 
         <TextView
@@ -34,6 +20,7 @@
             android:id="@+id/cita_tv_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:lines="3"
             android:text="内容" />
     </LinearLayout>
 
