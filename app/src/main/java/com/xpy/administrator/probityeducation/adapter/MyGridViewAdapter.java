@@ -58,7 +58,19 @@ public class MyGridViewAdapter extends BaseAdapter {
 
         GildeUtils.loadImage(Config.ADDRESS+list.get(position).getProduct_path(),context,holder.imtThumbnail);
 
-        holder.tvName.setText(list.get(position).getProduct_name() + "");
+        //如果班级不存在,则只显示姓名，如果班级存在则上面显示班级，下面一行显示姓名
+        //注意：这里先设置为空字符串，不然可能第一个item显示有问题
+        holder.tvName.setText("");
+        if(list.get(position).getBanji()!=null){
+            holder.tvName.setText(list.get(position).getBanji() + "");
+        }
+        if(list.get(position).getAuthor()!=null){
+            if(holder.tvName.getText().toString().trim().length()>0){
+                holder.tvName.setText(holder.tvName.getText()+"\n"+list.get(position).getAuthor() + "");
+            }else{
+                holder.tvName.setText(list.get(position).getAuthor() + "");
+            }
+        }
         return convertView;
     }
 

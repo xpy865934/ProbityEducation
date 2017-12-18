@@ -5,5 +5,5 @@ package com.xpy.administrator.probityeducation;
  */
 
 public class Config {
-    public static final String ADDRESS="http://172.17.3.2:8080";
+    public static final String ADDRESS="http://192.168.253.1:8080/ProbityEducationServer";
 }

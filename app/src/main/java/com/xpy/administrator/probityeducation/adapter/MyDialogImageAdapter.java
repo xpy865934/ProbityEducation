@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.xpy.administrator.probityeducation.Config;
 import com.xpy.administrator.probityeducation.R;
+import com.xpy.administrator.probityeducation.model.ProductModel;
 import com.xpy.administrator.probityeducation.utils.GildeUtils;
 
 import java.util.List;
@@ -20,10 +21,12 @@ import java.util.List;
 public class MyDialogImageAdapter extends BaseAdapter{
     private Context context;
     private List<String> list;
+    private ProductModel productModel;
 
-    public MyDialogImageAdapter(Context context,List<String> list){
+    public MyDialogImageAdapter(Context context,List<String> list,ProductModel productModel){
         this.context = context;
         this.list=list;
+        this.productModel = productModel;
     }
 
     //设置item不能点击
@@ -59,7 +62,7 @@ public class MyDialogImageAdapter extends BaseAdapter{
             holder = (Holder) convertView.getTag();
         }
 
-        GildeUtils.loadImage(Config.ADDRESS+"/ProbityEducationServer/products_image/1.jpg",context,holder.imgBig);
+        GildeUtils.loadImage(Config.ADDRESS+productModel.getProduct_path(),context,holder.imgBig);
 
         return convertView;
     }

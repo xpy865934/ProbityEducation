@@ -47,12 +47,11 @@ public class SheYingFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        myImageDialog = new MyImageDialog(getContext(),R.style.MyImageDialog);
         list = new ArrayList<>();
         adapter = new MyGridViewAdapter(getActivity(), list);
         gvSheYing.setAdapter(adapter);
 
-        HttpUtils.getInstances().httpJsonObjectRequest("/ProbityEducationServer/products", "{'type':'摄影'}", new HttpCallBack<List<ProductModel>>() {
+        HttpUtils.getInstances().httpJsonObjectRequest("/products_getAllByType.do", "{'type':'摄影'}", new HttpCallBack<List<ProductModel>>() {
             @Override
             public void onSuccess(List<ProductModel> data) {
                 list.addAll(data);
@@ -68,6 +67,7 @@ public class SheYingFragment extends Fragment {
         gvSheYing.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                myImageDialog = new MyImageDialog(getContext(),R.style.MyImageDialog,list.get(position));
                 myImageDialog.show();
             }
         });
